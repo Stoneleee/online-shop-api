@@ -47,7 +47,7 @@ const productController = {
 
     Product
       .findOne({ _id: idParams })
-      .remove((err, reomved) => res.json(idParams));
+      .remove((err, removed) => res.json(idParams));
   }
 }
 
