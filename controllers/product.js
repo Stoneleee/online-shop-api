@@ -36,7 +36,7 @@ const productController = {
 
     Product.updateOne({ _id: idParams }, { ...product }, (err, updated) => {
       Product
-        .findOne({ _id: newProduct._id })
+        .findOne({ _id: product._id })
         .populate('manufacturer')
         .exec((err, product) => res.json(product));
     });
